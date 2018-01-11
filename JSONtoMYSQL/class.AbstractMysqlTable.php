@@ -57,6 +57,8 @@ abstract class AbstractMysqlTable{
 			return "DATETIME";
 		}else if(is_string($val)){
 			return "TEXT";
+		}else if(is_null($val)){
+		    	return "TEXT";	
 		}else if(is_bool($val)){
 			return "TINYINT";
 		}else if(is_int($val)){
